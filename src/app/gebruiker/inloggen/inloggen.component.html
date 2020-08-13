@@ -1,0 +1,15 @@
+<form  [formGroup]="inloggenForm" (ngSubmit)="inloggenSubmit()">
+    <div>
+        <label for="email">email: </label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+    </div>
+    <div>
+        <label for="wachtwoord"> wachtwoord:</label>
+        <input type="password" class="form-control" id="wachtwoord" formControlName="wachtwoord">
+    </div>
+    <div>
+        <button class="btn btn-outline-primary" type="submit" [disabled]="!inloggenForm.valid">
+            Inloggen
+        </button>
+    </div>
+</form>

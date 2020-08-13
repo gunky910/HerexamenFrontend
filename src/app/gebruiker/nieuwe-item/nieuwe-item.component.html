@@ -1,0 +1,16 @@
+<h2>Item toevoegen</h2>
+<form  [formGroup]="itemToevoegenForm" (ngSubmit)="itemToevoegen()">
+    <div>
+        <label for="naam">naam: </label>
+            <input type="text" value="" class="form-control" id="naam" formControlName="naam">
+    </div>
+    <div>
+        <label for="beschrijving"> beschrijving:</label>
+        <input type="text" class="form-control" id="beschrijving" formControlName="beschrijving">
+    </div>
+    <div>
+        <button class="btn btn-outline-primary" value="" type="submit" [disabled]="!itemToevoegenForm.valid">
+            item toevoegen
+        </button>
+    </div>
+</form>

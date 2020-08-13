@@ -1,0 +1,23 @@
+<form  [formGroup]="lijstToevoegenForm" (ngSubmit)="lijstToevoegen()">
+    <div>
+        <label for="naam">naam: </label>
+            <input type="text" class="form-control" id="naam" formControlName="naam">
+    </div>
+    <div>
+        <label for="beschrijving"> beschrijving:</label>
+        <input type="text" class="form-control" id="beschrijving" formControlName="beschrijving">
+    </div>
+    <div>
+        <label for="startDatum"> start datum:</label>
+        <input type="date" class="form-control" id="startDatum" formControlName="startDatum">
+    </div>
+    <div>
+        <label for="eindDatum"> eind datum:</label>
+        <input type="date" class="form-control" id="eindDatum" formControlName="eindDatum">
+    </div>
+    <div>
+        <button class="btn btn-outline-primary" type="submit" [disabled]="!lijstToevoegenForm.valid">
+            lijst aanmaken
+        </button>
+    </div>
+</form>

@@ -1,0 +1,39 @@
+<table class="table">
+    <thead>
+        <h2>Aangemaakte lijsten</h2>
+      <tr>
+        
+        <th scope="col">Naam</th>
+        <th scope="col">Beschrijving</th>
+        <th scope="col">item toevoegen</th>
+        <th scope="col">datum aanpassen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let l of lijsten">
+        <td routerLink="/itemToevoegen/{{l.lijstID}}">{{l.naam}}</td>
+        <td routerLink="/itemToevoegen/{{l.lijstID}}"> {{l.beschrijving}}</td>
+        <td routerLink="/itemToevoegen/{{l.lijstID}}"><button>toevoegen</button></td>
+        <td routerLink="/lijstenbeheren/{{l.lijstID}}"><button>datum aanpassen</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+<h2>Gestemmde lijsten</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Naam</th>
+        <th scope="col">Beschrijving</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let g of gestemmedLijst">
+
+        <td routerLink="/stem/{{g.lijstID}}">{{g.naam}}</td>
+        <td routerLink="/stem/{{g.lijstID}}">{{g.beschrijving}}</td>
+        
+      </tr>
+    </tbody>
+  </table>

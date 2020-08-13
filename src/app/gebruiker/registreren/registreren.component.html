@@ -1,0 +1,23 @@
+<form  [formGroup]="registratieForm" (ngSubmit)="registratieSubmit()">
+    <div>
+        <label for="gebruikersnaam"> gebruikersnaam:</label>
+        <input type="text" class="form-control" id="gebruikersnaam" formControlName="gebruikersnaam">
+    </div>
+    <div>
+        <label for="email">email: </label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+    </div>
+    <div>
+        <label for="wachtwoord"> wachtwoord:</label>
+        <input type="password" class="form-control" id="wachtwoord" formControlName="wachtwoord">
+    </div>
+    <div>
+        <label for="wachtwoord2"> wachtwoord:</label>
+        <input type="password" class="form-control" id="wachtwoord2" formControlName="wachtwoord2">
+    </div>
+    <div>
+        <button class="btn btn-outline-primary" type="submit" [disabled]="!registratieForm.valid">
+           registreren
+        </button>
+    </div>
+</form>

@@ -1,0 +1,15 @@
+<form  [formGroup]="lijstUpdateForm" (ngSubmit)="lijstUpdate()">
+    <div>
+        <label for="startDatum"> start datum:</label>
+        <input type="date" class="form-control" id="startDatum" formControlName="startDatum">
+    </div>
+    <div>
+        <label for="eindDatum"> eind datum:</label>
+        <input type="date" class="form-control" id="eindDatum" formControlName="eindDatum">
+    </div>
+    <div>
+        <button class="btn btn-outline-primary" type="submit" [disabled]="!lijstUpdateForm.valid">
+           Update datums
+        </button>
+    </div>
+</form>
